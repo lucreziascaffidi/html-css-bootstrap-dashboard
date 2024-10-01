@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Book Page</title>
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--/Bootstrap-->
+
+    <!--Fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--/Fontawesome-->
+
+</head>
+
+<body>
+    <!--Intestazione del sito-->
+    <header class="mb-4">
+        <!--Nav bar con logo-->
+        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="img/duck.png" alt="logo-sito" width="60" height="60">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="#">Catalogo Libri</a>
+                        <a class="nav-link" href="#">Anagrafica Utenti</a>
+                        <a class="nav-link" href="#">Storico Prestiti</a>
+                        <a class="nav-link" href="#">Help</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--/Intestazione del sito-->
+
+    <!--Corpo della pagina-->
+    <main>
+        <div class="container">
+            <!--header section-->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h1 class=" fs-2 text-capitalize fw-normal">nuovo libro</h1>
+            </div>
+            <!--/header section-->
+
+            <!--Form section-->
+            <form>
+                <div class="row">
+
+                    <!--Nome autore-->
+                    <div class="col-6 mb-3">
+                        <label for="nome-autore" class="form-label">Nome Autore</label>
+                        <input type="text" class="form-control" id="nome-autore"
+                            placeholder="Inserisci il nome dell'autore" name="nome-autore">
+                    </div>
+                    <!--/Nome autore-->
+
+                    <!--Cognome autore-->
+                    <div class="col-6 mb-3">
+                        <label for="cognome-autore" class="form-label">Cognome Autore</label>
+                        <input type="text" class="form-control" id="cognome-autore"
+                            placeholder="Inserisci il cognome dell'autore" name="cognome-autore">
+                    </div>
+                    <!--/Cognome autore-->
+
+                    <!--Titolo libro-->
+                    <div class="col-12 mb-3">
+                        <label for="titolo-libro" class="form-label">Titolo</label>
+                        <input type="text" class="form-control" id="titolo-libro"
+                            placeholder="Inserisci il titolo del libro" name="titolo-libro" required>
+                        <div id="titolo-libro-ita-vers" class="form-text">Titolo versione italiana</div>
+                    </div>
+                    <!--/Titolo libro-->
+
+                    <!--Genere libro-->
+                    <div class="col-12 col-lg-4 mb-3">
+                        <label for="genere-libro" class="form-label">Genere</label>
+                        <select class="form-select" aria-label="genere-libro" name="genere-libro">
+                            <option selected>Scegli il genere</option>
+                            <option value="1">Storico</option>
+                            <option value="2">Horror</option>
+                            <option value="3">Romanzo</option>
+                        </select>
+                    </div>
+                    <!--/Genere libro-->
+
+                    <!--Anno di pubblicazione-->
+                    <div class="col-12 col-lg-4 mb-3">
+                        <label for="anno-libro" class="form-label">Anno di pubblicazione</label>
+                        <input type="text" class="form-control" id="anno-libro" placeholder="Inserisci l'anno"
+                            name="anno-pubblicazione">
+                    </div>
+                    <!--/Anno di pubblicazione-->
+
+                    <!--ISBN#-->
+                    <div class="col-12 col-lg-4 mb-3">
+                        <label for="ISBN#" class="form-label">ISBN#</label>
+                        <input type="text" class="form-control" id="ISBN#" placeholder="Inserisci il codice ISBN#"
+                            name="ISBN#">
+                    </div>
+                    <!--/ISBN#-->
+
+                    <div class="mb-2">
+                        <hr>
+                    </div>
+
+                    <!--Note-->
+                    <div class="col-12 mb-3">
+                        <label for="note-addnewbook" class="form-label">Note</label>
+                        <textarea class="form-control" id="note-addnewbook" rows="3"
+                            placeholder="Inserisci eventuali note sul libro" name="note-addnewbook"></textarea>
+                    </div>
+                    <!--/Note-->
+
+                    <!--Disponibile anche in digitale-->
+                    <div class="col-12 mb-3">
+                        <input class="form-check-input" type="checkbox" value="" id="digital-version-available"
+                            name="digital-version-available">
+                        <label class="form-check-label" for="digital-version-available">
+                            Disponibile anche in digitale
+                        </label>
+                    </div>
+                    <!--/Disponibile anche in digitale-->
+
+                    <!-- Button Aggiungi libro-->
+                    <div class="col-12 mb-3">
+                        <button type="submit" class="btn btn-primary text-capitalize">aggiungi libro</button>
+                    </div>
+                    <!--/Button aggiungi libro-->
+
+
+                </div>
+            </form>
+            <!--/Form section-->
+
+
+        </div>
+    </main>
+    <!--/Corpo della pagina-->
+
+    <!--JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!--/JS-->
+
+</body>
+
+</html>
